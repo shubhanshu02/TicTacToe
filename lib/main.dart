@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:TicTacToe/algo.dart';
 void main() {
   runApp(MyApp());
 }
@@ -37,10 +37,13 @@ class GameBoard extends StatefulWidget {
 }
 
 class _GameBoardState extends State<GameBoard> {
-  final board = ['', '', '', '', '', '', '', '', ''];
+  var board = List.filled(9, '');
 
   @override
   Widget build(BuildContext context) {
+    print('\n\n\n\n');
+    print('check: ${checkWin(board)}');
+    print(board.indexWhere((element) => element == ''));
     return Scaffold(
       appBar: AppBar(title: Text('Tic Tac Toe')),
       body: Column(
