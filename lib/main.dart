@@ -37,6 +37,8 @@ class GameBoard extends StatefulWidget {
 }
 
 class _GameBoardState extends State<GameBoard> {
+  final board = ['', '', '', '', '', '', '', '', ''];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +51,8 @@ class _GameBoardState extends State<GameBoard> {
             children: <Widget>[
               Container(
                 key: Key('1'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 1),
                   top: BorderSide(width: 1),
                   bottom: BorderSide(width: 2),
@@ -58,14 +61,26 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[0] == '') {
+                      this.setState(() {
+                        board[0] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[0].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
               Container(
                 key: Key('2'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 2),
                   top: BorderSide(width: 1),
                   bottom: BorderSide(width: 2),
@@ -74,14 +89,26 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[1] == '') {
+                      this.setState(() {
+                        board[1] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[1].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
               Container(
                 key: Key('3'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 2),
                   top: BorderSide(width: 1),
                   bottom: BorderSide(width: 2),
@@ -90,9 +117,20 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[2] == '') {
+                      this.setState(() {
+                        board[2] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[2].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
             ],
@@ -102,7 +140,8 @@ class _GameBoardState extends State<GameBoard> {
             children: <Widget>[
               Container(
                 key: Key('4'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 1),
                   top: BorderSide(width: 2),
                   bottom: BorderSide(width: 2),
@@ -111,14 +150,26 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[3] == '') {
+                      this.setState(() {
+                        board[3] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[3].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
               Container(
                 key: Key('5'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 2),
                   top: BorderSide(width: 2),
                   bottom: BorderSide(width: 2),
@@ -127,14 +178,26 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'X',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[4] == '') {
+                      this.setState(() {
+                        board[4] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[4].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
               Container(
                 key: Key('6'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 2),
                   top: BorderSide(width: 2),
                   bottom: BorderSide(width: 2),
@@ -143,9 +206,20 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[5] == '') {
+                      this.setState(() {
+                        board[5] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[5].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
             ],
@@ -155,7 +229,8 @@ class _GameBoardState extends State<GameBoard> {
             children: <Widget>[
               Container(
                 key: Key('7'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 1),
                   top: BorderSide(width: 2),
                   bottom: BorderSide(width: 1),
@@ -164,14 +239,26 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[6] == '') {
+                      this.setState(() {
+                        board[6] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[6].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
               Container(
                 key: Key('8'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 2),
                   top: BorderSide(width: 2),
                   bottom: BorderSide(width: 1),
@@ -180,14 +267,26 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[7] == '') {
+                      this.setState(() {
+                        board[7] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[7].toString(),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
               Container(
                 key: Key('9'),
-                decoration: BoxDecoration(border: Border(
+                decoration: BoxDecoration(
+                    border: Border(
                   left: BorderSide(width: 2),
                   top: BorderSide(width: 2),
                   bottom: BorderSide(width: 1),
@@ -196,10 +295,21 @@ class _GameBoardState extends State<GameBoard> {
                 alignment: Alignment.center,
                 height: 100,
                 width: 100,
-                child: Text(
-                  'O',
-                  key: Key('0'),
-                  style: TextStyle(fontSize: 50),
+                child: FlatButton(
+                  onPressed: () {
+                    if (board[8] == '') {
+                      this.setState(() {
+                        board[8] = 'X';
+                        print('\n\n\n');
+                        print(board);
+                      });
+                    }
+                  },
+                  child: Text(
+                    board[8].toString(),
+                    key: Key('0'),
+                    style: TextStyle(fontSize: 50),
+                  ),
                 ),
               ),
             ],
