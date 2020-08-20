@@ -29,13 +29,17 @@ bool checkWin(board) {
 
   return gameWin;
 }
-bool emptysq(board) {
-	for (int i = 0; i < 9; i++) {
-		if ((board[i] != 'X') && (board[i] != 'O')) return true;
-	}
-	return false;
+
+List emptysq(board) {
+  var list = [];
+  for (int i = 0; i < 9; i++) {
+    if ((board[i] != 'X') && (board[i] != 'O')) {
+      list.add(i);
+    }
+  }
+  return list;
 }
 
 bool checkTie(board) {
-  return !(emptysq(board) == true);
+  return !(emptysq(board).isNotEmpty);
 }

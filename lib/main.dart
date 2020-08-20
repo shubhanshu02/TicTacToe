@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:TicTacToe/checkWinning.dart';
+import 'package:TicTacToe/checkFunctions.dart';
+import 'package:TicTacToe/aiChoices.dart';
 void main() {
   runApp(MyApp());
 }
@@ -43,6 +44,9 @@ class _GameBoardState extends State<GameBoard> {
   Widget build(BuildContext context) {
     print('\n\n\n\n');
     print('check: ${checkWin(board)}');
+     print('ai: ${aiMove(board)}');
+    print('empty: ${emptysq(board)}');
+    print('tie: ${checkTie(board)}');
     print(board.indexWhere((element) => element == ''));
     return Scaffold(
       appBar: AppBar(title: Text('Tic Tac Toe')),
