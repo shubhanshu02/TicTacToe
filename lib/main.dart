@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:TicTacToe/algo.dart';
+import 'package:TicTacToe/checkWinning.dart';
 void main() {
   runApp(MyApp());
 }

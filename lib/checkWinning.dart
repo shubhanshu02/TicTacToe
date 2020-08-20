@@ -29,3 +29,13 @@ bool checkWin(board) {
 
   return gameWin;
 }
+bool emptysq(board) {
+	for (int i = 0; i < 9; i++) {
+		if ((board[i] != 'X') && (board[i] != 'O')) return true;
+	}
+	return false;
+}
+
+bool checkTie(board) {
+  return !(emptysq(board) == true);
+}
