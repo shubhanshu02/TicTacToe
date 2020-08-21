@@ -2,8 +2,9 @@ import 'package:TicTacToe/checkFunctions.dart';
 
 int aiMove(List<String> board) {
   //return board.indexWhere((element) => element == '');
-  List myb = board;
-  return minimax(myb, "O").index;
+  int answer = minimax(board, "O").index;
+  print('answer = $answer and arr board = $board');
+  return answer;
 }
 
 class minimaxResponse {

@@ -75,6 +75,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[0] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -103,6 +104,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[1] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -131,6 +133,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[2] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -164,6 +167,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[3] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -192,6 +196,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[4] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -220,6 +225,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[5] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -253,6 +259,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[6] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -281,6 +288,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[7] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -309,6 +317,7 @@ class _GameBoardState extends State<GameBoard> {
                         board[8] = 'X';
                         print('\n\n\n');
                         print(board);
+                        if (emptysq(board).isNotEmpty) board[aiMove(board)] = 'O';
                       });
                     }
                   },
@@ -411,3 +420,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
