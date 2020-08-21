@@ -47,7 +47,7 @@ class _GameBoardState extends State<GameBoard> {
      print('ai: ${aiMove(board)}');
     print('empty: ${emptysq(board)}');
     print('tie: ${checkTie(board)}');
-    print(board.indexWhere((element) => element == ''));
+
     return Scaffold(
       appBar: AppBar(title: Text('Tic Tac Toe')),
       body: Column(

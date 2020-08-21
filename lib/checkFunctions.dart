@@ -1,30 +1,33 @@
-bool checkWin(board) {
+int checkWin(board) {
+  // player wins, gamewin =1 else if comp wins, gamewin=2
   var a = board;
-  var gameWin = false;
-
-  if (a[0] + a[1] + a[2] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[3] + a[4] + a[5] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[6] + a[7] + a[8] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[0] + a[3] + a[6] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[1] + a[4] + a[7] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[2] + a[5] + a[8] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[0] + a[4] + a[8] == 'XXX') {
-    gameWin = true;
-  }
-  if (a[6] + a[4] + a[2] == 'XXX') {
-    gameWin = true;
+  var gameWin = 0;
+  var marker = ['XXX', 'OOO'];
+  for (int i = 0; i < 2; i++) {
+    if (a[0] + a[1] + a[2] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[3] + a[4] + a[5] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[6] + a[7] + a[8] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[0] + a[3] + a[6] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[1] + a[4] + a[7] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[2] + a[5] + a[8] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[0] + a[4] + a[8] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
+    if (a[6] + a[4] + a[2] == marker[i]) {
+      gameWin = (marker[i] == 'XXX') ? 1 : 2;
+    }
   }
 
   return gameWin;
